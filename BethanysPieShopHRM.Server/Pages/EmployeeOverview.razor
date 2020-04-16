@@ -21,10 +21,14 @@ else
         @foreach (var employee in Employees)
         {
         <tr>
-            <td><img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{employee.EmployeeId}-small.jpg")" /></td>
+            <td><img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{employee.EmployeeId}-small.jpg")" class="img-responsive rounded-circle" /></td>
             <td>@employee.EmployeeId</td>
             <td>@employee.FirstName</td>
             <td>@employee.LastName</td>
+            <td>
+                <a href="@($"employeedetail/{employee.EmployeeId}")" class="btn btn-primary">Detail
+                </a>
+            </td>
         </tr>
         }
     </tbody>
